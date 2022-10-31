@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expresion regular</title>
+</head>
+<style>
+    .formulario{
+        display: block;
+        margin: auto;
+        padding: 20px;
+    }
+    .formulario form{
+        background: yellowgreen;
+        font-size: 1.5rem;
+    }
+    .respuesta{
+        display: block;
+        margin-top: 5rem;
+        margin: auto;
+        padding: 20px;
+    }
+</style>
+<body>
+<h1>exprsiuon regular</h1>
+     
+<div class="formulario">
+            <form>
+            
+                <label for="">placa</label>
+                <input type="text" name="placa" id="placa">
+                <button  onclick="leerPlaca();" >ok</button>
+           
+        </form>
+
+</div>
+ 
+<div id="div1">El texto superior se ha creado dinámicamente.</div>
+    
+    <script>
+        function leerPlaca(){
+            event.preventDefault;
+          let placa = document.getElementById("placa").value;
+
+          // alert(placa)
+          //var re = /^[^$%&|<>#]*$/;
+
+          if(/^[^$%&?!|<>#]*$/.test(placa)) {
+          
+           const ExpRegNomUsuario= /^[a-z0-9-]{6,8}$/;
+            
+            const NomUsuarioValida=placa;//Cadena de Nombres de Usuario
+            const NomUsuarioinvalida=placa;//Cadena de Nombres de Usuario
+            
+            //Evaluación de Cadena Valida de Nombres de Usuario
+            if(NomUsuarioValida.match(ExpRegNomUsuario)!=null)
+               return console.log("Nombres de Usuario Válida");
+            
+            //Evaluación de Cadena Invalida de Nombres de Usuario  
+            if(NomUsuarioinvalida.match(ExpRegNomUsuario)==null)
+               return console.log("Nombres de Usuario Invalida");
+          }else{
+            return console.log('INVALIDO')
+          }
+         
+           
+        }
+    </script>
+    
+</body>
+</html>

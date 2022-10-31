@@ -1,0 +1,27 @@
+{
+  "name": "cochera-app",
+  "version": "1.0.0",
+  "description": "Api cochera app que busca gentionar la llegada y salida de vehiculos de u8na playa d estacionamiento",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon  ./src/ index.js",
+    "start": "node ./src/ index.js"
+  },
+  "author": "Richard Lipa",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dateformat": "^5.0.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "mongoose": "^6.6.0",
+    "mongoose-timestamp": "^0.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
